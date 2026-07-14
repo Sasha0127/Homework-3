@@ -1,10 +1,12 @@
 body {
-  background-color: #000;
   font-family: "Inter", sans-serif;
 }
+ul {
+  list-style: none;
+}
 /* header styles */
-.header {
-  background-color: #fff;
+.header:hover {
+  background-color: aqua;
 }
 
 .header-link {
@@ -26,6 +28,16 @@ body {
   font-weight: 400;
   line-height: normal;
   text-decoration: none;
+}
+
+/* Якщо властивість яку потрібно застосувати одинакова то ми можемо прописати псевдокласи через кому */
+.header-nav-link:hover,
+.header-nav-link:focus {
+  color: red;
+}
+/* Якщо властивості різні тоді створюємо окремий клас під кожну властивість */
+.header-nav-link:visited {
+  color: green;
 }
 /* hero section styles */
 .hero-section {
@@ -55,16 +67,89 @@ body {
   background: #000;
   border: none;
 }
+.hero-button:hover {
+  color: bisque;
+}
+.hero-button:active {
+  color: aqua;
+}
+/* about-section styles */
 .about-section {
   border: 2px solid #faf0e6;
   background-color: #faf0e6;
+}
+.about-heading {
+  color: #000;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.about-text {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.about-item:first-child {
+  border: 1px solid red;
+}
+.item-text {
+  color: #000;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.item-button {
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: 1px solid #000;
+  background-color: inherit;
+}
+.about-button {
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  background-color: inherit;
 }
 .footer-section {
   border: 2px solid #faf0e6;
   background-color: #f4f4f4;
 }
+.footer-heading {
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+.footer-text {
+  color: #000;
+
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
 .footer-list {
   list-style: none;
+}
+.footer {
+  background: #000;
 }
 .footer-logo {
   color: #fff;
